@@ -54,11 +54,21 @@ export default function Testimonials() {
     {
       name: "Amit S.",
       text: "Had a severe toothache and needed an emergency root canal. The doctor handled it perfectly. Very professional and caring staff.",
+    },
+    {
+      name: "Deepak K.",
+      text: "State-of-the-art clinic with all modern facilities. The staff is polite, and Dr. Kashyap explains everything in detail before starting.",
+    },
+    {
+      name: "Pooja V.",
+      text: "My braces treatment went flawlessly here. Every appointment was on time and the prices are very genuine. Thank you team KDC!",
     }
   ];
 
+  const duplicatedReviews = [...reviews, ...reviews];
+
   return (
-    <section id="reviews" ref={container} className="py-24 px-6 md:px-12 lg:px-24 bg-background">
+    <section id="reviews" ref={container} className="py-24 px-6 md:px-12 lg:px-24 bg-background overflow-hidden relative">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="font-sans font-bold text-3xl md:text-5xl text-primary mb-6">
           Loved by Our Patients
@@ -73,28 +83,30 @@ export default function Testimonials() {
         </p>
       </div>
 
-      <div className="reviews-grid max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {reviews.map((review, idx) => (
-          <div key={idx} className="review-card bg-white p-8 rounded-3xl shadow-sm border border-primary/5 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                ))}
+      <div className="w-full overflow-hidden relative pb-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-12 md:before:w-32 before:bg-gradient-to-r before:from-background before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:bottom-0 after:w-12 md:after:w-32 after:bg-gradient-to-l after:from-background after:to-transparent after:z-10">
+        <div className="flex w-max animate-marquee gap-8 pr-8">
+          {duplicatedReviews.map((review, idx) => (
+            <div key={idx} className="review-card w-[300px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-3xl shadow-sm border border-primary/5 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div className="flex gap-1 mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                <p className="text-primary/80 italic mb-6">
+                  "{review.text}"
+                </p>
               </div>
-              <p className="text-primary/80 italic mb-6">
-                "{review.text}"
-              </p>
+              <div className="font-bold text-primary">
+                - {review.name}
+              </div>
             </div>
-            <div className="font-bold text-primary">
-              - {review.name}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       
       {/* Smile Gallery */}
-      <div id="gallery" className="max-w-7xl mx-auto mt-32 text-center">
+      <div id="gallery" className="max-w-7xl mx-auto mt-24 text-center">
          <h3 className="font-sans font-bold text-3xl md:text-4xl text-primary mb-4">
             Smile Transformations
          </h3>
@@ -112,6 +124,8 @@ export default function Testimonials() {
                 <img 
                   src={caseItem.img} 
                   alt={caseItem.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     e.target.style.display = 'none';

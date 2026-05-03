@@ -87,7 +87,9 @@ export default function AboutUs() {
             <img 
               src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000" 
               alt="Our Specialists" 
-              className="w-full h-[500px] object-cover rounded-2xl grayscale mix-blend-multiply group-hover:grayscale-0 transition-all duration-700"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover rounded-2xl grayscale mix-blend-multiply group-hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute bottom-8 left-8 right-8 bg-white p-6 rounded-2xl shadow-xl border-l-4 border-accent grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
