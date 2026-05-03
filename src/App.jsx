@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustBanner from './components/TrustBanner';
@@ -23,7 +22,6 @@ function App() {
       </main>
       <Footer />
       <FloatingContact />
-      <Analytics />
     </div>
   );
 }
