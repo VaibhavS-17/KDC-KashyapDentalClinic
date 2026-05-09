@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Star } from 'lucide-react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+// ScrollTrigger is registered centrally in main.jsx
 
 export default function Testimonials() {
   const container = useRef(null);

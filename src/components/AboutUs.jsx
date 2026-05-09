@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+// ScrollTrigger is registered centrally in main.jsx
 
 export default function AboutUs() {
   const container = useRef(null);
