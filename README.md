@@ -1,33 +1,49 @@
 # Kashyap Dental Clinic Website
 
-A modern single-page dental clinic website built with React, Vite, Tailwind CSS, and GSAP. The project presents Kashyap Dental Clinic through a polished landing experience with strong branding, motion, service details, patient reviews, smile transformations, and direct booking actions.
+Kashyap Dental Clinic Website is a polished single-page marketing site built with React and Vite. It showcases the clinic's services, patient reviews, smile transformation gallery, location, timings, and direct booking/contact actions in a mobile-friendly landing page.
 
-## Project Overview
+## Overview
 
-This app is structured as a promotional and lead-generation site for Kashyap Dental Clinic. It focuses on making it easy for visitors to learn about the clinic, explore treatments, review social proof, and contact the team quickly by phone, WhatsApp, or directions.
+This project is designed as a public-facing clinic showcase and lead-generation site. Visitors can quickly explore the clinic, understand the treatments offered, read social proof, and reach the team through call, WhatsApp, or map directions.
 
-The live experience currently includes:
+## Live Demo
 
-- A timed preloader with clinic branding
-- A sticky navigation bar with section links and appointment CTA
-- A hero section with consultation and services CTAs
-- A trust banner highlighting rating, specialist care, implants, and availability
-- A comprehensive services grid with modal inquiries
-- An about section introducing the specialist doctors and clinic values
-- A patient testimonials carousel and smile transformation gallery
-- A location and timings section with an embedded Google Map
-- A floating phone and WhatsApp contact widget
-- Vercel Analytics integration for lightweight usage tracking
+Add your deployed site here:
 
-## Key Features
+- Demo URL: https://your-demo-link-here.com
 
-- Responsive, mobile-friendly layout
-- Animated page sections using GSAP and ScrollTrigger
-- Direct call and WhatsApp booking flows
-- Service cards with modal inquiry actions
-- Google Maps embed for clinic directions
-- Smile case gallery stored in the `public/gallery` folder
-- Accessible, branded UI with custom Tailwind theme colors and fonts
+## Screenshots
+
+Add the exported screenshots to `docs/screenshots/` and update the image names below.
+
+![Homepage screenshot](docs/screenshots/homepage.png)
+
+![Services screenshot](docs/screenshots/services.png)
+
+![Experts and Reviews screenshot](docs/screenshots/reviews.png)
+
+## Badges
+
+You can place status badges directly under the title once the repo is public.
+
+```md
+![Build](https://img.shields.io/github/actions/workflow/status/OWNER/REPO/workflow.yml)
+![License](https://img.shields.io/github/license/OWNER/REPO)
+![Issues](https://img.shields.io/github/issues/OWNER/REPO)
+```
+
+### What the site includes
+
+- Timed preloader with clinic branding
+- Sticky navigation with section links and a booking CTA
+- Hero section with consultation and services calls to action
+- Trust banner with clinic proof points
+- Services grid with modal inquiry flow
+- About section with clinic and doctor context
+- Patient testimonials carousel
+- Smile transformation gallery sourced from `public/gallery`
+- Location, timings, and embedded Google Maps section
+- Floating phone and WhatsApp contact widget
 
 ## Tech Stack
 
@@ -36,8 +52,8 @@ The live experience currently includes:
 - Tailwind CSS
 - GSAP and `@gsap/react`
 - Lucide React icons
-- `clsx` and `tailwind-merge` for class composition
-- `@vercel/analytics` for analytics
+- `clsx` and `tailwind-merge`
+- `@vercel/analytics`
 
 ## Project Structure
 
@@ -45,36 +61,23 @@ The live experience currently includes:
 src/
   App.jsx                Main app shell and section composition
   main.jsx               React entry point
-  index.css              Global styles, animations, and base theme
+  index.css              Global styles and theme layer
+  setupTests.js          Vitest test setup
   components/
     Preloader.jsx        Initial loading screen
     Navbar.jsx           Sticky navigation and CTA buttons
-    Hero.jsx             Main landing section and consultation CTA
+    Hero.jsx             Main landing section
     TrustBanner.jsx      Proof points and clinic highlights
     Services.jsx         Treatment cards and inquiry modal
-    AboutUs.jsx          Specialist introduction and clinic values
-    Testimonials.jsx     Reviews carousel and smile gallery
+    AboutUs.jsx          Clinic and doctor introduction
+    Testimonials.jsx     Reviews carousel and gallery
     Footer.jsx           Location, timings, map, and footer links
     FloatingContact.jsx  Persistent phone and WhatsApp shortcuts
-    Protocol.jsx         Experimental protocol/storytelling section
-    Philosophy.jsx       Brand philosophy section
-    Features.jsx         Feature showcase section
 ```
 
-## Clinic Information
+## Featured Services
 
-- Clinic name: Kashyap Dental Clinic
-- Address: Satyam Shivam Shopping Centre, Near Nallasopara Railway Station, Nallasopara East, Maharashtra
-- Phone: 6360724703
-- WhatsApp: 8310112284
-- Google Maps: https://share.google/DCXZnudvhlELSjrmi
-- Hours:
-  - Monday to Saturday: 10:00 AM - 10:00 PM
-  - Sunday: 10:00 AM - 6:00 PM
-
-## Treatments Highlighted
-
-The site currently showcases these core services:
+The site currently highlights:
 
 - Dental Implants
 - Smile Designing
@@ -83,16 +86,14 @@ The site currently showcases these core services:
 - General Dentistry
 - Orthodontics
 
-## Design System
+## Clinic Information
 
-The visual theme is defined in Tailwind and uses a clean medical palette:
-
-- `primary`: deep clinic blue
-- `accent`: bright sky blue
-- `background`: light gray-blue base
-- `dark`: near-black text tone
-
-Typography is configured around modern display and serif pairings for a premium medical brand feel.
+- Clinic name: Kashyap Dental Clinic
+- Address: Satyam Shivam Shopping Centre, Near Nallasopara Railway Station, Nallasopara East, Maharashtra
+- Phone: 6360724703
+- WhatsApp: 8310112284
+- Google Maps: https://share.google/DCXZnudvhlELSjrmi
+- Hours: Monday to Saturday 10:00 AM - 10:00 PM, Sunday 10:00 AM - 6:00 PM
 
 ## Getting Started
 
@@ -101,7 +102,7 @@ Typography is configured around modern display and serif pairings for a premium 
 - Node.js 18 or newer
 - npm
 
-If PowerShell blocks `npm` scripts in your environment, use `npm.cmd` instead.
+If PowerShell blocks script execution on your machine, use `npm.cmd` instead of `npm`.
 
 ### Install Dependencies
 
@@ -109,7 +110,7 @@ If PowerShell blocks `npm` scripts in your environment, use `npm.cmd` instead.
 npm install
 ```
 
-### Run the Development Server
+### Run Locally
 
 ```bash
 npm run dev
@@ -127,18 +128,36 @@ npm run build
 npm run preview
 ```
 
-### Lint the Project
+### Run Tests and Lint
 
 ```bash
+npm run test
 npm run lint
 ```
 
-## Notes
+## Deploying Publicly
 
-- The app uses local assets from `public/`, including the logo, clinic image, and before-and-after gallery images.
-- Several sections rely on scroll-triggered animation, so the page is designed to be experienced vertically from top to bottom.
-- `Protocol.jsx`, `Philosophy.jsx`, and `Features.jsx` are present as additional storytelling components and can be integrated into the main page if the layout expands.
+This repository is currently private, so before publishing it to GitHub I recommend:
+
+1. Add a license file if you want others to reuse the code.
+2. Create a short deployment link in the README once the site is live on Vercel, Netlify, or another host.
+3. Add screenshots or a short GIF near the top of the README so the project is immediately visible when someone opens the repo.
+4. Review any private contact details or business information before making the repository public.
 
 ## License
 
-No explicit license is currently defined in this repository.
+If you want others to reuse the code, add a `LICENSE` file at the repo root before making the repository public.
+
+Common choices:
+
+- MIT License: simple and permissive
+- Apache 2.0: permissive with patent protection language
+- GPL-3.0: copyleft license if you want derivatives to stay open
+
+In GitHub, you can add one from the repository home page by using Add file > Create new file and naming it `LICENSE`, or by choosing a license when creating a new repository.
+
+## Notes
+
+- The site uses local assets from `public/`, including the logo and gallery images.
+- Several sections rely on scroll-triggered animation, so the experience is intended to be viewed vertically.
+- The existing tests and lint setup are ready for a public repo workflow.
