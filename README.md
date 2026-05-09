@@ -40,17 +40,22 @@ Add your deployed site here:
       <br />
       <sub>Reviews</sub>
     </td>
+    <td align="center">
+      <img src="docs/screenshots/gallery.png" alt="Gallery screenshot" width="100%" />
+      <br />
+      <sub>Smile Gallery</sub>
+    </td>
   </tr>
 </table>
 
 
 ## Badges
 
-```md
-![Build](https://img.shields.io/github/actions/workflow/status/OWNER/REPO/workflow.yml)
-![License](https://img.shields.io/github/license/OWNER/REPO)
-![Issues](https://img.shields.io/github/issues/OWNER/REPO)
-```
+[![License](https://img.shields.io/github/license/VaibhavS-17/KDC?style=for-the-badge)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/VaibhavS-17/KDC?style=for-the-badge)](https://github.com/VaibhavS-17/KDC/issues)
+[![Stars](https://img.shields.io/github/stars/VaibhavS-17/KDC?style=for-the-badge)](https://github.com/VaibhavS-17/KDC)
+
+If you add a GitHub Actions workflow later, you can add a build badge above these.
 
 ### What the site includes
 

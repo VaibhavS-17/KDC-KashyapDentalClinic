@@ -132,6 +132,19 @@ export default function Footer() {
           <div className="text-white/40 text-sm font-display text-center">
             © {new Date().getFullYear()} Kashyap Dental Clinic. All rights reserved.
           </div>
+          <div className="text-white/35 text-sm font-display text-center flex items-center gap-2">
+            <span>Crafted by Vaibhav Sable</span>
+            <span className="text-white/20">|</span>
+            <a
+              href="https://www.linkedin.com/in/vaibhav-sable-4725782ba/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile of Vaibhav Sable"
+              className="inline-flex items-center text-white/45 hover:text-white/80 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </footer>
     </>
