@@ -32,13 +32,13 @@ export default function TrustBanner() {
     },
     {
       icon: <ShieldCheck className="w-6 h-6 text-accent" />,
-      title: "Advanced Implant Center",
-      desc: "State-of-the-art tech"
+      title: "2 Modern Clinics",
+      desc: "Nallasopara East & West"
     },
     {
       icon: <Clock className="w-6 h-6 text-accent" />,
       title: "Open 7 Days a Week",
-      desc: "Flexible timings for you"
+      desc: "Morning to Night Care"
     }
   ];
 

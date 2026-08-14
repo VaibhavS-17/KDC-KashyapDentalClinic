@@ -33,7 +33,8 @@ export default function Navbar() {
             { label: 'Services', id: '#services' },
             { label: 'About Us', id: '#about-us' },
             { label: 'Reviews', id: '#reviews' },
-            { label: 'Smile Gallery', id: '#gallery' }
+            { label: 'Smile Gallery', id: '#gallery' },
+            { label: 'Locations', id: '#locations' }
           ].map((item) => (
             <a 
               key={item.label}

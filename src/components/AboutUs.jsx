@@ -38,9 +38,10 @@ export default function AboutUs() {
 
   const points = [
     "Specialized MDS Doctors",
+    "2 Modern Clinics in Nallasopara (East & West)",
     "Painless & Stress-Free Environment",
     "Strict Sterilization Protocols",
-    "Advanced Dental Technology"
+    "Advanced Dental & Implant Technology"
   ];
 
   return (
@@ -53,17 +54,17 @@ export default function AboutUs() {
             Meet Your Specialists
           </h2>
           <p className="about-text text-primary/70 text-lg mb-6 leading-relaxed">
-            At Kashyap Dental Clinic, we believe in providing expert care that prioritizes your comfort and long-term health. Our clinic is led by highly qualified MDS specialists, ensuring that complex procedures like implants and root canals are handled by experts under one roof.
+            At Kashyap Dental Clinic & Implant Centre, we believe in providing expert care that prioritizes your comfort and long-term health. Available across two fully equipped branches in Nallasopara (East & West), our practice is led by highly qualified MDS specialists.
           </p>
           <p className="about-text text-primary/70 text-lg mb-8 leading-relaxed">
-            We don't just treat teeth; we restore confidence. Our patient-first approach means we listen to your concerns, explain every step of the procedure, and ensure a completely stress-free experience.
+            We don't just treat teeth; we restore confidence. Our patient-first approach means we listen to your concerns, explain every step of the procedure, and ensure a completely stress-free experience for implants, root canals, and cosmetic smile makeovers.
           </p>
 
           <div className="about-text grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
             {points.map((point, idx) => (
               <div key={idx} className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="font-medium text-primary">{point}</span>
+                <span className="font-medium text-primary text-sm sm:text-base">{point}</span>
               </div>
             ))}
           </div>
@@ -78,27 +79,31 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Image / Doctor Profiles Placeholder */}
+        {/* Image / Doctor Profiles */}
         <div className="about-image relative mt-8 lg:mt-0">
           <div className="absolute inset-0 bg-accent/10 rounded-[3rem] transform translate-x-4 translate-y-4 -z-10 hidden sm:block" />
           <div className="bg-background rounded-[2rem] sm:rounded-[3rem] p-4 sm:p-8 relative group shadow-inner">
             <img 
               src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000" 
-              alt="Our Specialists" 
+              alt="Specialist Doctors" 
               loading="lazy"
               decoding="async"
               className="w-full h-[350px] md:h-[500px] object-cover rounded-2xl grayscale mix-blend-multiply group-hover:grayscale-0 transition-all duration-700"
             />
             <div className="mt-[-4rem] mx-4 sm:mx-0 sm:mt-0 sm:absolute sm:bottom-8 sm:left-8 sm:right-8 bg-white p-6 rounded-2xl shadow-xl border-l-4 border-accent grid grid-cols-1 sm:grid-cols-2 gap-6 z-10 relative">
               <div>
-                <h4 className="font-sans font-bold text-xl text-primary mb-1">Dr. Riteeka Kashyap</h4>
-                <p className="text-primary/70 text-sm font-bold">BDS, MDS</p>
-                <p className="text-primary/60 text-xs mt-1">Conservative Dentistry & Endodontist<br/>Esthetic & Cosmetic Dentistry</p>
+                <h4 className="font-sans font-bold text-lg md:text-xl text-primary mb-0.5">Dr. RK Kashyap</h4>
+                <p className="text-accent text-xs font-bold uppercase tracking-wider">BDS, MDS (Reg no. 51751A)</p>
+                <p className="text-primary/70 text-xs mt-1.5 leading-relaxed">
+                  Prosthodontist, Crown, Bridge,<br />Implantologist & Smile Designing
+                </p>
               </div>
               <div className="sm:border-l sm:border-primary/10 sm:pl-4 border-t border-primary/10 pt-4 sm:border-t-0 sm:pt-0">
-                <h4 className="font-sans font-bold text-xl text-primary mb-1">Dr. Riteek Kashyap</h4>
-                <p className="text-primary/70 text-sm font-bold">BDS, MDS</p>
-                <p className="text-primary/60 text-xs mt-1">Prosthodontist, Crown, Bridge<br/>Implantologist & Smile Designing</p>
+                <h4 className="font-sans font-bold text-lg md:text-xl text-primary mb-0.5">Dr. Jha Riteeka Kashyap</h4>
+                <p className="text-accent text-xs font-bold uppercase tracking-wider">BDS, MDS (Reg no. 61695)</p>
+                <p className="text-primary/70 text-xs mt-1.5 leading-relaxed">
+                  Conservative Dentistry & Endodontist,<br />Esthetic & Cosmetic Dentistry
+                </p>
               </div>
             </div>
           </div>
