@@ -67,38 +67,38 @@ export default function Footer() {
   return (
     <>
       {/* The Local Proof Section */}
-      <section id="locations" className="bg-background py-28 px-6 md:px-12 lg:px-24">
+      <section id="locations" className="bg-background py-16 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
           
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-semibold px-4 py-1.5 rounded-full text-sm mb-4">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-semibold px-4 py-1.5 rounded-full text-xs sm:text-sm mb-3">
             <Building2 className="w-4 h-4 text-accent" />
             2 Convenient Locations in Nallasopara
           </div>
 
-          <h2 className="font-sans font-bold text-3xl md:text-5xl text-dark mb-4">
+          <h2 className="font-sans font-bold text-2xl sm:text-4xl md:text-5xl text-dark mb-3">
             Visit Our Clinics
           </h2>
-          <p className="text-dark/60 font-display text-lg mb-10 max-w-2xl">
+          <p className="text-dark/60 font-display text-base sm:text-lg mb-8 max-w-2xl px-2">
             Choose the branch closest to you in Nallasopara East or West for complete dental care and smile restoration.
           </p>
 
-          {/* Branch Switcher Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 p-1.5 bg-white rounded-full border border-primary/10 shadow-sm mb-10">
+          {/* Branch Switcher Tabs - Mobile First */}
+          <div className="w-full max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-2 p-1.5 bg-white rounded-2xl sm:rounded-full border border-primary/10 shadow-sm mb-8">
             {CLINIC_BRANCHES.map((branch) => {
               const isActive = branch.id === currentBranch.id;
               return (
                 <button
                   key={branch.id}
                   onClick={() => handleBranchSelect(branch.id)}
-                  className={`px-6 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 flex items-center gap-2 ${
+                  className={`w-full py-3 px-4 rounded-xl sm:rounded-full text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
                     isActive
                       ? 'bg-primary text-white shadow-md'
                       : 'text-primary/70 hover:text-primary hover:bg-primary/5'
                   }`}
                 >
-                  <MapPin className={`w-4 h-4 ${isActive ? 'text-accent' : 'text-primary/40'}`} />
-                  <span>{branch.name}</span>
-                  <span className={`text-xs px-2 py-0.5 rounded-full ${isActive ? 'bg-white/20 text-white' : 'bg-primary/5 text-primary/60'}`}>
+                  <MapPin className={`w-4 h-4 flex-shrink-0 ${isActive ? 'text-accent' : 'text-primary/40'}`} />
+                  <span className="truncate">{branch.name}</span>
+                  <span className={`text-[10px] sm:text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${isActive ? 'bg-white/20 text-white' : 'bg-primary/5 text-primary/60'}`}>
                     {branch.tag}
                   </span>
                 </button>
@@ -107,24 +107,24 @@ export default function Footer() {
           </div>
 
           {/* Main Branch Card */}
-          <div className="grid lg:grid-cols-12 gap-8 w-full text-left bg-white p-6 sm:p-10 rounded-[3rem] shadow-sm border border-primary/5">
+          <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 w-full text-left bg-white p-5 sm:p-8 md:p-10 rounded-3xl sm:rounded-[3rem] shadow-sm border border-primary/5">
             
             {/* Details Column */}
             <div className="lg:col-span-7 flex flex-col justify-between gap-6">
               <div>
-                <div className="flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-wider mb-1">
+                <div className="flex items-center gap-2 text-accent font-bold text-xs uppercase tracking-wider mb-1">
                   <span>{currentBranch.badge}</span>
                 </div>
-                <h3 className="font-sans font-bold text-2xl md:text-3xl text-primary mb-4">
+                <h3 className="font-sans font-bold text-xl sm:text-2xl md:text-3xl text-primary mb-4 leading-tight">
                   {currentBranch.fullName}
                 </h3>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 bg-background p-4 rounded-2xl border border-primary/5">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-3 bg-background p-3.5 sm:p-4 rounded-2xl border border-primary/5">
                     <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold text-primary text-sm mb-1">Address</h4>
-                      <p className="text-primary/80 leading-relaxed text-base">
+                      <h4 className="font-bold text-primary text-xs sm:text-sm mb-1">Address</h4>
+                      <p className="text-primary/80 leading-relaxed text-sm sm:text-base">
                         {currentBranch.addressLines.map((line, idx) => (
                           <span key={idx}>
                             {line}
@@ -135,19 +135,19 @@ export default function Footer() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 bg-background p-4 rounded-2xl border border-primary/5">
+                  <div className="flex items-start gap-3 bg-background p-3.5 sm:p-4 rounded-2xl border border-primary/5">
                     <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                     <div className="w-full">
-                      <h4 className="font-bold text-primary text-sm mb-1">Clinic Timings</h4>
-                      <div className="flex justify-between text-sm py-1 border-b border-primary/5">
+                      <h4 className="font-bold text-primary text-xs sm:text-sm mb-1">Clinic Timings</h4>
+                      <div className="flex justify-between text-xs sm:text-sm py-1 border-b border-primary/5">
                         <span className="text-primary/70 font-medium">Monday – Saturday:</span>
                         <span className="font-bold text-primary">{currentBranch.timingsWeekdays}</span>
                       </div>
-                      <div className="flex justify-between text-sm py-1">
+                      <div className="flex justify-between text-xs sm:text-sm py-1">
                         <span className="text-primary/70 font-medium">Sunday:</span>
                         <span className="font-bold text-primary">{currentBranch.timingsSunday}</span>
                       </div>
-                      <p className="text-xs font-semibold text-accent mt-2">
+                      <p className="text-[11px] sm:text-xs font-semibold text-accent mt-2">
                         ✨ Walk-ins & Prior Appointments Welcome
                       </p>
                     </div>
@@ -155,33 +155,33 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-wrap gap-3 pt-2">
+              {/* Action Buttons - Mobile First Stacked */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
                 <a 
                   href={currentBranch.mapUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group flex-1 min-w-[180px] bg-primary text-white px-6 py-3.5 rounded-2xl text-sm font-bold transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                  className="group w-full bg-primary text-white py-3.5 px-4 rounded-2xl text-sm font-bold transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2 shadow-md hover:shadow-lg active:scale-95"
                 >
-                  <MapPin className="w-4 h-4 text-accent" />
+                  <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
                   <span>Get Directions</span>
                 </a>
 
                 <a 
                   href={`tel:${currentBranch.phoneClean}`}
-                  className="group px-6 py-3.5 rounded-2xl text-sm font-bold bg-background text-primary border border-primary/10 hover:border-primary/30 transition-all flex items-center justify-center gap-2"
+                  className="group w-full py-3.5 px-4 rounded-2xl text-sm font-bold bg-background text-primary border border-primary/10 hover:border-primary/30 transition-all flex items-center justify-center gap-2 active:scale-95"
                 >
-                  <Phone className="w-4 h-4 text-accent" />
-                  <span>Call {currentBranch.phoneClean}</span>
+                  <Phone className="w-4 h-4 text-accent flex-shrink-0" />
+                  <span>Call Us</span>
                 </a>
 
                 <a 
                   href={`https://wa.me/${currentBranch.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group px-6 py-3.5 rounded-2xl text-sm font-bold bg-[#25D366]/10 text-[#128C7E] hover:bg-[#25D366]/20 transition-all flex items-center justify-center gap-2"
+                  className="group w-full py-3.5 px-4 rounded-2xl text-sm font-bold bg-[#25D366]/10 text-[#128C7E] hover:bg-[#25D366]/20 transition-all flex items-center justify-center gap-2 active:scale-95"
                 >
-                  <MessageSquare className="w-4 h-4 text-[#25D366]" />
+                  <MessageSquare className="w-4 h-4 text-[#25D366] flex-shrink-0" />
                   <span>WhatsApp</span>
                 </a>
               </div>
@@ -192,7 +192,7 @@ export default function Footer() {
               
               {/* Active Clinic Photo Showcase */}
               {currentBranch.photos && currentBranch.photos.length > 0 && (
-                <div className="bg-background rounded-2xl p-3 border border-primary/5">
+                <div className="bg-background rounded-2xl p-2.5 sm:p-3 border border-primary/5">
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-inner group">
                     <img 
                       src={currentBranch.photos[activePhotoIdx]?.src || currentBranch.photos[0].src} 
@@ -201,10 +201,10 @@ export default function Footer() {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-3 text-white">
-                      <span className="text-xs font-bold text-accent uppercase tracking-wider">
+                      <span className="text-[11px] sm:text-xs font-bold text-accent uppercase tracking-wider">
                         {currentBranch.photos[activePhotoIdx]?.title}
                       </span>
-                      <span className="text-xs text-white/80">
+                      <span className="text-[10px] sm:text-xs text-white/80">
                         {currentBranch.photos[activePhotoIdx]?.subtitle}
                       </span>
                     </div>
@@ -222,6 +222,7 @@ export default function Footer() {
                               ? 'border-accent shadow-sm scale-95'
                               : 'border-transparent opacity-70 hover:opacity-100'
                           }`}
+                          aria-label={`View ${p.title}`}
                         >
                           <img src={p.src} alt={p.title} className="w-full h-full object-cover" />
                         </button>
@@ -232,7 +233,7 @@ export default function Footer() {
               )}
 
               {/* Embedded Google Map */}
-              <div className="rounded-2xl overflow-hidden bg-background shadow-inner h-[220px] border border-primary/5">
+              <div className="rounded-2xl overflow-hidden bg-background shadow-inner h-[200px] sm:h-[220px] border border-primary/5">
                 <iframe 
                   src={currentBranch.mapEmbed} 
                   width="100%" 
