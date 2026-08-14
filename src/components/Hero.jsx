@@ -30,9 +30,6 @@ export default function Hero() {
         <div className="relative z-10 flex flex-col items-start text-left">
           <div className="hero-anim flex flex-wrap gap-2 mb-6">
             <span className="inline-flex items-center bg-accent/10 text-accent font-bold px-4 py-2 rounded-full text-sm">
-              2 Clinics in Nallasopara West
-            </span>
-            <span className="inline-flex items-center bg-accent/10 text-accent font-bold px-4 py-2 rounded-full text-sm">
               Expert MDS Care
             </span>
           </div>
