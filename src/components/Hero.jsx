@@ -28,10 +28,13 @@ export default function Hero() {
         
         {/* Content */}
         <div className="relative z-10 flex flex-col items-start text-left">
-          <div className="hero-anim inline-flex items-center flex-wrap gap-2 bg-accent/10 text-accent font-bold px-4 py-2 rounded-full mb-6 text-sm">
-            <span>2 Clinics in Nallasopara West</span>
-            <span className="text-accent/40">•</span>
-            <span>Expert MDS Care</span>
+          <div className="hero-anim flex flex-wrap gap-2 mb-6">
+            <span className="inline-flex items-center bg-accent/10 text-accent font-bold px-4 py-2 rounded-full text-sm">
+              2 Clinics in Nallasopara West
+            </span>
+            <span className="inline-flex items-center bg-accent/10 text-accent font-bold px-4 py-2 rounded-full text-sm">
+              Expert MDS Care
+            </span>
           </div>
           
           <h1 className="hero-anim font-sans font-bold text-4xl md:text-5xl lg:text-6xl text-primary leading-tight mb-6">
