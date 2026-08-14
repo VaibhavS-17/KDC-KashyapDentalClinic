@@ -30,16 +30,16 @@ const CLINIC_BRANCHES = [
   },
   {
     id: 'east',
-    name: 'Nallasopara East (Station Road)',
-    tag: 'East Branch',
+    name: 'Nallasopara West (Station Road)',
+    tag: 'Station Road Branch',
     badge: 'Near Railway Station',
     fullName: 'Kashyap Dental Clinic',
     addressLines: [
-      'Satyam Shivam Shopping Centre',
+      'Shop No 155, 1st Floor, Satyam Shivam Shopping Centre',
       'Near Nallasopara Railway Station',
-      'Nallasopara East, Maharashtra 401209'
+      'Nallasopara West, Maharashtra 401203'
     ],
-    pincode: '401209',
+    pincode: '401203',
     timingsWeekdays: '10:00 AM – 10:00 PM',
     timingsSunday: '10:00 AM – 6:00 PM',
     phone: '6360724703',
@@ -79,7 +79,7 @@ export default function Footer() {
             Visit Our Clinics
           </h2>
           <p className="text-dark/60 font-display text-base sm:text-lg mb-8 max-w-2xl px-2">
-            Choose the branch closest to you in Nallasopara East or West for complete dental care and smile restoration.
+            Choose the branch closest to you in Nallasopara West for complete dental care and smile restoration.
           </p>
 
           {/* Branch Switcher Tabs - Mobile First */}
@@ -261,7 +261,7 @@ export default function Footer() {
               <img src="/KDC_logo.png" alt="KDC Logo" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-white/70 font-display text-sm leading-relaxed">
-              Expert dental care and advanced smile restoration you can trust. Serving patients across two dedicated branches in Nallasopara East and West.
+              Expert dental care and advanced smile restoration you can trust. Serving patients across two dedicated branches in Nallasopara West.
             </p>
             <div className="flex items-center gap-2 text-xs font-semibold text-accent bg-white/5 py-2 px-3 rounded-xl w-fit">
               <span>★ 5.0 Rated Dental Practice</span>
@@ -285,9 +285,9 @@ export default function Footer() {
               </div>
 
               <div className="bg-white/5 p-3.5 rounded-xl border border-white/10">
-                <span className="text-accent font-bold text-xs uppercase block mb-1">Branch 1 • Nallasopara East</span>
+                <span className="text-accent font-bold text-xs uppercase block mb-1">Branch 1 • Station Road</span>
                 <p className="text-white/80 font-medium leading-snug">
-                  Satyam Shivam Shopping Centre, Near Railway Station, Nalasopara (E) - 401209
+                  Shop No 155, 1st Floor, Satyam Shivam Shopping Centre, Near Railway Station, Nalasopara (W) - 401203
                 </p>
                 <p className="text-white/50 text-xs mt-1">Timings: Mon–Sat 10am–10pm | Sun 10am–6pm</p>
               </div>

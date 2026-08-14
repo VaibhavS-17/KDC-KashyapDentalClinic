@@ -29,7 +29,7 @@ export default function Hero() {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-start text-left">
           <div className="hero-anim inline-flex items-center flex-wrap gap-2 bg-accent/10 text-accent font-bold px-4 py-2 rounded-full mb-6 text-sm">
-            <span>2 Clinics: Nallasopara East & West</span>
+            <span>2 Clinics in Nallasopara West</span>
             <span className="text-accent/40">•</span>
             <span>Expert MDS Care</span>
           </div>
@@ -69,7 +69,7 @@ export default function Hero() {
           <div className="absolute bottom-6 left-6 right-6 z-20 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/40 shadow-lg flex items-center justify-between">
             <div>
               <p className="text-primary font-bold text-sm">2 Modern Clinics in Nallasopara</p>
-              <p className="text-primary/60 text-xs">Sea Grapes Bldg (West) & Station Rd (East)</p>
+              <p className="text-primary/60 text-xs">Sea Grapes Bldg & Station Rd (Both in West)</p>
             </div>
             <a 
               href="#locations" 
