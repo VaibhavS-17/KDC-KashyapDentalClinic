@@ -4,8 +4,8 @@ import { MapPin, ArrowRight, Clock, Phone, MessageSquare, Building2, ChevronRigh
 const CLINIC_BRANCHES = [
   {
     id: 'west',
-    name: 'Nallasopara West (Sea Grapes)',
-    tag: 'West Branch',
+    name: 'Sea Grapes Building',
+    tag: 'Main Clinic',
     badge: 'Implant Centre & Clinic',
     fullName: 'Kashyap Dental Clinic & Implant Centre',
     addressLines: [
@@ -30,8 +30,8 @@ const CLINIC_BRANCHES = [
   },
   {
     id: 'east',
-    name: 'Nallasopara West (Station Road)',
-    tag: 'Station Road Branch',
+    name: 'Station Road',
+    tag: 'Branch Clinic',
     badge: 'Near Railway Station',
     fullName: 'Kashyap Dental Clinic',
     addressLines: [
