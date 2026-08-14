@@ -3,9 +3,32 @@ import { MapPin, ArrowRight, Clock, Phone, MessageSquare, Building2, ChevronRigh
 
 const CLINIC_BRANCHES = [
   {
+    id: 'east',
+    name: 'Station Road',
+    tag: 'Branch 1',
+    badge: 'Near Railway Station',
+    fullName: 'Kashyap Dental Clinic',
+    addressLines: [
+      'Shop No 155, 1st Floor, Satyam Shivam Shopping Centre',
+      'Near Nallasopara Railway Station',
+      'Nallasopara West, Maharashtra 401203'
+    ],
+    pincode: '401203',
+    timingsWeekdays: '10:00 AM – 10:00 PM',
+    timingsSunday: '10:00 AM – 6:00 PM',
+    phone: '6360724703',
+    phoneClean: '6360724703',
+    whatsapp: '918310112284',
+    mapUrl: 'https://share.google/DCXZnudvhlELSjrmi',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15053.868778848154!2d72.81057488049182!3d19.418463991206173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a96d112347bd%3A0xc3ab279e2a77ed5b!2sNalasopara%20Station%20Rd%2C%20Nalasopara%20East%2C%20Nala%20Sopara%2C%20Maharashtra%20401209!5e0!3m2!1sen!2sin!4v1714736631851!5m2!1sen!2sin',
+    photos: [
+      { src: '/KDC_clinic_image.webp', title: 'Clinic Setup', subtitle: 'Modern Operatory' }
+    ]
+  },
+  {
     id: 'west',
     name: 'Sea Grapes Building',
-    tag: 'Main Clinic',
+    tag: 'Branch 2',
     badge: 'Implant Centre & Clinic',
     fullName: 'Kashyap Dental Clinic & Implant Centre',
     addressLines: [
@@ -27,34 +50,11 @@ const CLINIC_BRANCHES = [
       { src: '/clinics/west-standee.png', title: 'Doctor & Services Board', subtitle: 'MDS Specialists' },
       { src: '/clinics/west-street.png', title: 'Street View', subtitle: 'Near Vimal Classic' }
     ]
-  },
-  {
-    id: 'east',
-    name: 'Station Road',
-    tag: 'Branch Clinic',
-    badge: 'Near Railway Station',
-    fullName: 'Kashyap Dental Clinic',
-    addressLines: [
-      'Shop No 155, 1st Floor, Satyam Shivam Shopping Centre',
-      'Near Nallasopara Railway Station',
-      'Nallasopara West, Maharashtra 401203'
-    ],
-    pincode: '401203',
-    timingsWeekdays: '10:00 AM – 10:00 PM',
-    timingsSunday: '10:00 AM – 6:00 PM',
-    phone: '6360724703',
-    phoneClean: '6360724703',
-    whatsapp: '918310112284',
-    mapUrl: 'https://share.google/DCXZnudvhlELSjrmi',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15053.868778848154!2d72.81057488049182!3d19.418463991206173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a96d112347bd%3A0xc3ab279e2a77ed5b!2sNalasopara%20Station%20Rd%2C%20Nalasopara%20East%2C%20Nala%20Sopara%2C%20Maharashtra%20401209!5e0!3m2!1sen!2sin!4v1714736631851!5m2!1sen!2sin',
-    photos: [
-      { src: '/KDC_clinic_image.webp', title: 'Clinic Setup', subtitle: 'Modern Operatory' }
-    ]
   }
 ];
 
 export default function Footer() {
-  const [selectedBranchId, setSelectedBranchId] = useState('west');
+  const [selectedBranchId, setSelectedBranchId] = useState('east');
   const [activePhotoIdx, setActivePhotoIdx] = useState(0);
 
   const currentBranch = CLINIC_BRANCHES.find(b => b.id === selectedBranchId) || CLINIC_BRANCHES[0];
@@ -277,19 +277,19 @@ export default function Footer() {
 
             <div className="space-y-4 text-sm">
               <div className="bg-white/5 p-3.5 rounded-xl border border-white/10">
-                <span className="text-accent font-bold text-xs uppercase block mb-1">Branch 2 • Nallasopara West</span>
-                <p className="text-white/80 font-medium leading-snug">
-                  Shop G/01, Sea Grapes Bldg., Near Vimal Classic, Nalasopara (W) - 401203
-                </p>
-                <p className="text-white/50 text-xs mt-1">Timings: Mon–Sat 10am–10pm | Sun 10am–7pm</p>
-              </div>
-
-              <div className="bg-white/5 p-3.5 rounded-xl border border-white/10">
                 <span className="text-accent font-bold text-xs uppercase block mb-1">Branch 1 • Station Road</span>
                 <p className="text-white/80 font-medium leading-snug">
                   Shop No 155, 1st Floor, Satyam Shivam Shopping Centre, Near Railway Station, Nalasopara (W) - 401203
                 </p>
                 <p className="text-white/50 text-xs mt-1">Timings: Mon–Sat 10am–10pm | Sun 10am–6pm</p>
+              </div>
+
+              <div className="bg-white/5 p-3.5 rounded-xl border border-white/10">
+                <span className="text-accent font-bold text-xs uppercase block mb-1">Branch 2 • Sea Grapes Bldg</span>
+                <p className="text-white/80 font-medium leading-snug">
+                  Shop G/01, Sea Grapes Bldg., Near Vimal Classic, Nalasopara (W) - 401203
+                </p>
+                <p className="text-white/50 text-xs mt-1">Timings: Mon–Sat 10am–10pm | Sun 10am–7pm</p>
               </div>
             </div>
           </div>
